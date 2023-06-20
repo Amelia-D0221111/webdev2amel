@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Amelia</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/font-awesome.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/components/base.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/components/card.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/components/header.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/components/navigation.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/components/about.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/components/contact.css' %}" />
+  <link rel="stylesheet" href="{% static '/css/components/footer.css' %}" />
+</head>
+
+<body>
+  <input id="toggle-menu" type="checkbox" />
+  <label for="toggle-menu" class="mobile-menu">
+    <i class="fa fa-bars" aria-hidden="true"></i>
+  </label>
+
+  <nav class="nav">
+    <ul class="nav__container">
+      <li class="nav__item">
+        <a class="nav__link" href="#about"> About </a>
+      </li>
+      <li class="nav__item">
+        <a class="nav__link" href="#contact"> Contact </a>
+      </li>
+      <li class="nav__item">
+        <a class="nav__link" href="{% url 'crud' %}"> CRUD </a>
+      </li>
+    </ul>
+  </nav>
+
+  <header id="home" style="
+        background: url('{% static 'images/lead-bg.jpeg' %}') no-repeat 50%
+          center scroll;
+      ">
+    <div class="header__container">
+      <h1 class="header__title">Amelia</h1>
+      <a style="display: inline-block; padding: 10px 20px; display: none" href="#">
+      </a>
+    </div>
+    <div class="header__overlay"></div>
+    <div class="header__container-bottom">
+      <a class="header__arrow" href="#about">
+        <i class="fa fa-chevron-down" aria-hidden="true"></i>
+      </a>
+    </div>
+  </header>
+
+  <section id="about" class="about">
+    <div class="about__content">
+      <h2 class="title about__title">About Me</h2>
+      <p class="about__text">
+        Halo! Saya mahasiswa Informatika dari Universitas Sulawesi Barat. Saya
+        suka matematika dan bahasa pemrograman Python.
+      </p>
+    </div>
+  </section>
+
+  <section style="display: none" id="experience"></section>
+
+  <section style="display: none" id="education"></section>
+
+  <section style="display: none" id="projects"></section>
+
+  <section style="display: none" id="skills"></section>
+
+  <section id="contact" class="contact section-container">
+    <h2 class="title">Contact</h2>
+    <ul class="contact__list">
+      <li class="contact__container">
+        <a target="_blank" href="https://github.com/amelia-d0221111/" class="contact__item">
+          <span class="contact__icon">
+            <i class="fa fa-github fa-4" aria-hidden="true"></i>
+          </span>
+          <h3 class="contact__name">Github</h3>
+        </a>
+      </li>
+      <li class="contact__container">
+        <a target="_blank" href="https://instagram.com/amelysfrtnaaa" class="contact__item">
+          <span class="contact__icon">
+            <i class="fa fa-instagram fa-4" aria-hidden="true"></i>
+          </span>
+          <h3 class="contact__name">Instagram</h3>
+        </a>
+      </li>
+      <li class="contact__container">
+        <a target="_blank" href="https://twitter.com/amelysfrtna" class="contact__item">
+          <span class="contact__icon">
+            <i class="fa fa-twitter fa-4" aria-hidden="true"></i>
+          </span>
+          <h3 class="contact__name">Twitter</h3>
+        </a>
+      </li>
+    </ul>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__center">
+      <a href="#home" class="footer__arrow">
+        <i class="fa fa-chevron-up" aria-hidden="true"></i>
+      </a>
+    </div>
+    <p class="copyright">Copyright © 2023 Edwin</p>
+  </footer>
+
+  <script src="{% static 'js/index.js' %}"></script>
+</body>
+
+</html>
